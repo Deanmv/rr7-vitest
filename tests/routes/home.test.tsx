@@ -1,5 +1,5 @@
 //External
-import { describe, test } from "vitest";
+import { describe, test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { Router } from "react-router";
 import { createMemoryHistory } from "history";

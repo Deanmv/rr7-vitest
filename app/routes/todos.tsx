@@ -8,15 +8,15 @@ export async function loader() {
 	return todos
 } 
 
-export default function TodoPage({
+export default function TodosPage({
 	loaderData
 }: Route.ComponentProps) {
 	const todos = loaderData;
 
 	return (
 		<>
-			<h1>Todo - 200 of them</h1>
-			<ul>
+			<h1>Todos - 200 of them</h1>
+			<ul data-testid="todos-list">
 				{todos.map((todo: Todo) => (
 					<li key={todo.id}><input type="checkbox" defaultChecked={todo.completed}/>{todo.title}</li>
 				))}
